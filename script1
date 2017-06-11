@@ -1,0 +1,28 @@
+// ==UserScript==
+// @name         Adludum Revenue
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        http://www.adludum.com/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+
+function adludum() {
+    var revenue = $('.txt-color-blue').html();
+    var clicks = $('.txt-color-purple').html();    
+
+    document.title = revenue + '/' + clicks + ' - Adludum';
+}
+
+    adludum();   
+
+setInterval(function() {
+    adludum();
+}, 30000);
+
+
+    // Your code here...
+})();
